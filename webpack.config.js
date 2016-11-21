@@ -1,10 +1,21 @@
+const path = require('path');
+
 module.exports = {
   // Entry point
+  context: __dirname,
   entry: './client/app/main.js',
   output: {
     // Name of the file exported
-    path: './client',
+    path: path.join(__dirname, '/client'),
     filename: 'index.js'
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.json']
+  },
+  stats: {
+    colors: true,
+    reasons: true,
+    chunks: false
   },
   devServer: {
     // hot reload
@@ -16,6 +27,7 @@ module.exports = {
     // For the loaders
     loaders: [
       {
+        // REGEX for files to run through webpack
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel',
