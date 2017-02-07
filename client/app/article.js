@@ -15,7 +15,7 @@ const Article = (props) => {
       </div>
       <div className='article-content'>
         <a href={url}>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
         </a>
         <p className='article-subreddit' onClick={handleSubscribe}>Subscribe to: 
           <span className='subreddit-link'>{subreddit}</span>

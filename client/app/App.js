@@ -150,6 +150,9 @@ class App extends React.Component {
       articles: this.state.articles.filter(article => article.data.subreddit !== unsubscribe)
     }, () => {
       this.setLocalStorage()
+      if (this.state.subscriptions.length === 0) {
+        this.fetchFrontPage()
+      }
     })
   }
 
@@ -162,10 +165,12 @@ class App extends React.Component {
       subscriptions: JSON.parse(window.localStorage.getItem('reddit')) || []
     })
   }
+  
   componentDidMount () {
     this.fetchSubscriptions()
     window.addEventListener('scroll', this.infiniteScroll)
   }
+
   render () {
     return (
       <div className='container'>

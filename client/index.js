@@ -21632,6 +21632,9 @@
 	        })
 	      }, function () {
 	        _this3.setLocalStorage();
+	        if (_this3.state.subscriptions.length === 0) {
+	          _this3.fetchFrontPage();
+	        }
 	      });
 	    }
 	  }, {
@@ -21721,7 +21724,7 @@
 	        'a',
 	        { href: url },
 	        _react2.default.createElement(
-	          'h3',
+	          'h4',
 	          null,
 	          title
 	        )
