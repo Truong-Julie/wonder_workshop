@@ -6,4 +6,4 @@ You will need to have live-server installed
 Start Application
 - Run `npm install`
 - Run `npm run build`
-- Navigate to client folder and run `live-server`# wonder_workshop
+- Navigate to client folder and run `live-server`
