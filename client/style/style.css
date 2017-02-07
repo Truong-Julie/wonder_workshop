@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+}
+
+.article {
+  display: flex;
+  max-width: 75vw;
+}
+
+.subscriptions {
+  position: fixed;
+  right: 0;
+  display: flex;
+  min-width: 25vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription img {
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+
+.subreddit-link {
+  text-decoration: underline;
+  padding: .75em;
+}
+
+.subreddit-link:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.subreddit-link:active {
+  color: red;
+}
